@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://c1ltk6kjdg1a"]
+
+[ext_resource type="Texture2D" uid="uid://do8pbc3jfvyhf" path="res://assets/PNG_Parts&Spriter_Animation/Ship5/Ship5.png" id="1_8vs44"]
+[ext_resource type="Script" path="res://ship_scene/ship_image.gd" id="2_q448u"]
+[ext_resource type="Texture2D" uid="uid://ctox3g3meish1" path="res://assets/PNG_Parts&Spriter_Animation/Ship5/Exhaust/Normal_flight/Exhaust2/exhaust1.png" id="3_78kvo"]
+[ext_resource type="Script" path="res://ship_scene/exhaust_ship.gd" id="4_641s1"]
+
+[node name="ShipScene" type="Node2D"]
+
+[node name="ShipImage" type="Sprite2D" parent="."]
+position = Vector2(116, 149)
+texture = ExtResource("1_8vs44")
+script = ExtResource("2_q448u")
+
+[node name="ExhaustShip" type="Sprite2D" parent="ShipImage"]
+position = Vector2(-71, 8)
+scale = Vector2(1.25, 1.3125)
+texture = ExtResource("3_78kvo")
+script = ExtResource("4_641s1")

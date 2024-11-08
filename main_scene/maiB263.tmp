@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5x4uy3ct4md8"]
+
+[ext_resource type="PackedScene" uid="uid://11675ukgwyf2" path="res://background_scene/background_scene.tscn" id="1_3xsax"]
+[ext_resource type="PackedScene" uid="uid://c1ltk6kjdg1a" path="res://ship_scene/ship_scene.tscn" id="2_2h1qg"]
+[ext_resource type="PackedScene" uid="uid://ch8lwn4017g03" path="res://lazer_scene/lazer_scene.tscn" id="3_mo0ch"]
+
+[node name="MainScene" type="Node2D"]
+
+[node name="BackgroundScene" parent="." instance=ExtResource("1_3xsax")]
+position = Vector2(-3, 0)
+
+[node name="ShipScene" parent="BackgroundScene" instance=ExtResource("2_2h1qg")]
+position = Vector2(27, 203)
+
+[node name="LazerScene" parent="BackgroundScene/ShipScene" instance=ExtResource("3_mo0ch")]
+position = Vector2(90, 37)
